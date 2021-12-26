@@ -1,0 +1,151 @@
+:root {
+  /* Colors primary */
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+
+  /* Neutral */
+  --Very-dark-blue-body: hsl(217, 54%, 11%);
+  --Very-dark-blue-card: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--Very-dark-blue-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container ------------ */
+.container {
+  background: var(--Very-dark-blue-card);
+  padding: 20px;
+  max-width: 350px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  border-radius: 10px;
+  color: var(--Soft-blue);
+  box-shadow: 2px 2px 5px 15px rgba(0,0,0,.1);
+}
+
+.container-img img {
+  border-radius: 10px;
+}
+
+.container-img {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.container-img div {
+  position: absolute;
+  background: hsl(178, 100%, 50%, 50%);
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  top: 0;
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+}
+
+.container-img div:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.container-img div img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Content -------- */
+.content h2 {
+  color: var(--White);
+  margin-bottom: 15px;
+  transition: .3s ease-in-out;
+}
+
+.content h2:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+
+.content p {
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.content ul {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--Very-dark-blue-line);
+}
+
+.content li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.content li:first-child {
+  color: var(--Cyan);
+  font-weight: 600;
+}
+
+/*  Creator ------*/
+.creator {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.creator img {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--White);
+  border-radius: 50%;
+}
+
+.creator a {
+  color: var(--White);
+  transition: .3s ease-in-out;
+}
+
+.creator a:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .container {
+    margin: 20px;
+    min-width: 250px;
+  }
+}
